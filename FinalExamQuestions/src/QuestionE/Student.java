@@ -1,6 +1,7 @@
 package QuestionE;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class Student extends Person {
 
@@ -15,10 +16,10 @@ public class Student extends Person {
         this.Major = Major;           
     }
     
-	public Student(String FirstName, String MiddleName, String LastName,Date DOB, String Major,
+	public Student(UUID personID, String FirstName, String MiddleName, String LastName,Date DOB, String Major,
 			String Address, String Phone_number, String Email) 
 	{
-		super(FirstName, MiddleName, LastName, DOB, Address, Phone_number, Email);
+		super(personID, FirstName, MiddleName, LastName, DOB, Address, Phone_number, Email);
 		this.Major = Major;
 		
 	}
