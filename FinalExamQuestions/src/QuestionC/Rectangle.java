@@ -2,7 +2,7 @@ package QuestionC;
 
 public class Rectangle extends Shape {
 
-	public Rectangle(int newx, int newy) {
+	public Rectangle(int newx, int newy) throws IllegalRectangle {
 		super(newx, newy);
 	}
 
@@ -14,5 +14,10 @@ public class Rectangle extends Shape {
 	public double ComputeArea() {
 		return this.getX() * this.getY();
 	}
-
+	
+	public void main(String [] args)
+	{
+	
+	}
 }
+

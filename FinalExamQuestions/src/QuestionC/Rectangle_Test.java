@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+
 public class Rectangle_Test {
 
 	@BeforeClass
@@ -28,16 +29,28 @@ public class Rectangle_Test {
 
 	@Test
 	public void Rectangle_Test1() {
-		Rectangle r2 = new Rectangle(-5, -10);		
-		assertTrue(r2.ComputeArea() == 50);
+		// modified this test for my test function
+		try{
+			Rectangle r2 = new Rectangle(-5, -10);
+			int thex = r2.getX();
+			int they = r2.getY();
+			assertTrue(r2.ComputeArea() == 50);
+		} catch (IllegalRectangle e) {
+				System.out.println("Sorry, but either your x or your y is negative");
+		}
 	}
 	
 	@Test
 	public void Rectangle_Test2() {
 		
 	
-		Rectangle r2 = new Rectangle(-5, -10);
-		assertTrue(r2.ComputeArea() == 50);
+		Rectangle r2;
+		try {
+			r2 = new Rectangle(5, 10);
+			assertTrue(r2.ComputeArea() == 50);
+		} catch (IllegalRectangle e) {
+			System.out.println("Sorry, but either your x or your y is negative");
+		}
 	}
 	
 

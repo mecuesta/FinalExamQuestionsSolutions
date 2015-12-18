@@ -71,18 +71,6 @@ abstract class Shape {
 	
 	public void main(String [] args)
 	{
-	try{
-		Rectangle r1 = new Rectangle(-5, -10);
-		int thex = r1.getX();
-		int they = r1.getY();
-		if (thex < 0) {
-			int notgoingtowork = 2/0;
-		}
-		else if (they <0) {
-			int notgoingtowork = 2/0;
-		}
-	} catch (RectangleException e) {
-			System.out.println("Sorry, but either your x or your y is negative");
-		} 
+	
 	}
-	}
+}
