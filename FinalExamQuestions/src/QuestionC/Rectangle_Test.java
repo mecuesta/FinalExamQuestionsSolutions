@@ -28,8 +28,7 @@ public class Rectangle_Test {
 
 	@Test
 	public void Rectangle_Test1() {
-		
-		Rectangle r2 = new Rectangle(-5, -10);
+		Rectangle r2 = new Rectangle(-5, -10);		
 		assertTrue(r2.ComputeArea() == 50);
 	}
 	
