@@ -28,29 +28,17 @@ public class Rectangle_Test {
 	}
 
 	@Test
-	public void Rectangle_Test1() {
-		// modified this test for my test function
-		try{
-			Rectangle r2 = new Rectangle(-5, -10);
-			int thex = r2.getX();
-			int they = r2.getY();
-			assertTrue(r2.ComputeArea() == 50);
-		} catch (IllegalRectangle e) {
-				System.out.println("Sorry, but either your x or your y is negative");
-		}
+	public void Rectangle_Test1() throws IllegalRectangle {		
+		Rectangle r2 = new Rectangle(-5, -10);		
+		assertTrue(r2.ComputeArea() == 50);
 	}
 	
 	@Test
-	public void Rectangle_Test2() {
+	public void Rectangle_Test2() throws IllegalRectangle {
 		
 	
-		Rectangle r2;
-		try {
-			r2 = new Rectangle(5, 10);
-			assertTrue(r2.ComputeArea() == 50);
-		} catch (IllegalRectangle e) {
-			System.out.println("Sorry, but either your x or your y is negative");
-		}
+		Rectangle r2 = new Rectangle(-5, -10);
+		assertTrue(r2.ComputeArea() == 50);
 	}
 	
 
