@@ -6,6 +6,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.UUID;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -50,20 +51,26 @@ public class Student_Test {
 			e.printStackTrace();
 		}
 		
-		int personID;
-		for (personID = 1; personID < 6; personID++) {
-			Student stu1 = new Student("Bert", "Randall", "Gibbons", dBirthDate1, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
-			Student stu1 = new Student("Bert", "Randall", "Gibbons", dBirthDate1, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
-			
-		}
-		HashMap<personID, Student> Students = new HashMap<personID, Student> ();
 		
-			
 		
-		Student stu1 = new Student("Bert", "Randall", "Gibbons", dBirthDate1, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
-		Student stu2 = new Student("Manuel", "Enrique", "Cuesta", )
+		Student stu1 = new Student(new UUID(1, 1), "Bert", "Randall", "Gibbons", dBirthDate1, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
+		Student stu2 = new Student(new UUID(2, 1), "Bert", "Randall", "Gibbons", dBirthDate2, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
+		Student stu3 = new Student(new UUID(3, 1), "Bert", "Randall", "Gibbons", dBirthDate3, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
+		Student stu4 = new Student(new UUID(4, 1), "Bert", "Randall", "Gibbons", dBirthDate4, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
+		Student stu5 = new Student(new UUID(5, 1), "Bert", "Randall", "Gibbons", dBirthDate5, "214 Labrador Lane", "302-893-6889", "bgibbons@udel.edu","MIS");
 
-		assertTrue(1==1);
+		
+		HashMap<Integer, Student> Students = new HashMap<Integer, Student> ();
+		
+		Students.put(1, stu1);
+		Students.put(2, stu2);
+		Students.put(3, stu3);
+		Students.put(4, stu4);
+		Students.put(5, stu5);
+		// dont know what the question was asking since i am doing this outside of my lab. only whats not in my github, that is
+		assertTrue(stu4 == Students.get(4));
+		assertTrue(Students.get(2).getDOB() == dBirthDate2);
+		// The Rest should work too
 	}
 
 }
